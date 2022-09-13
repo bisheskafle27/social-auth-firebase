@@ -63,19 +63,25 @@ export default function Home() {
       {user == null && (
         <Stack>
           <Button
-            bg="twitter.500"
+            bg="twitter.400"
             leftIcon={<FaTwitter />}
             onClick={() => TwitterLogin()}
             color="white"
+            _hover={{
+              bg: "twitter.500",
+            }}
           >
             Sign In With Twitter
           </Button>
 
           <Button
-            bg="black"
+            bg="blackAlpha.800"
             leftIcon={<FaGithub />}
             onClick={() => GithubLogin()}
             color="white"
+            _hover={{
+              bg: "blackAlpha.900",
+            }}
           >
             Sign In With Github
           </Button>
@@ -85,6 +91,9 @@ export default function Home() {
             leftIcon={<FaGoogle />}
             onClick={() => GoogleLogin()}
             color="white"
+            _hover={{
+              bg: "red.500",
+            }}
           >
             Sign In With Google
           </Button>
@@ -93,6 +102,9 @@ export default function Home() {
             bg="facebook.400"
             leftIcon={<FaFacebook />}
             onClick={() => FacebookLogin()}
+            _hover={{
+              bg: "facebook.500",
+            }}
             color="white"
           >
             Sign In With Facebook
@@ -100,7 +112,17 @@ export default function Home() {
         </Stack>
       )}
 
-      {user && <Button onClick={() => auth.signOut()}>Logout</Button>}
+      {user && (
+        <Button
+          onClick={() => auth.signOut()}
+          bg="orange.400"
+          _hover={{
+            bg: "orange.500",
+          }}
+        >
+          Logout
+        </Button>
+      )}
 
       <Box position="fixed" bottom="0" p={5} color="" fontSize={"xl"}>
         Made with ❤️ by{" "}
