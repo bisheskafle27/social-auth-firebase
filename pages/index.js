@@ -66,14 +66,16 @@ export default function Home() {
             bg="twitter.500"
             leftIcon={<FaTwitter />}
             onClick={() => TwitterLogin()}
+            color="white"
           >
             Sign In With Twitter
           </Button>
 
           <Button
-            bg="github"
+            bg="black"
             leftIcon={<FaGithub />}
             onClick={() => GithubLogin()}
+            color="white"
           >
             Sign In With Github
           </Button>
@@ -82,6 +84,7 @@ export default function Home() {
             bg="red.400"
             leftIcon={<FaGoogle />}
             onClick={() => GoogleLogin()}
+            color="white"
           >
             Sign In With Google
           </Button>
@@ -90,6 +93,7 @@ export default function Home() {
             bg="facebook.400"
             leftIcon={<FaFacebook />}
             onClick={() => FacebookLogin()}
+            color="white"
           >
             Sign In With Facebook
           </Button>
@@ -97,6 +101,17 @@ export default function Home() {
       )}
 
       {user && <Button onClick={() => auth.signOut()}>Logout</Button>}
+
+      <Box position="fixed" bottom="0" p={5} color="" fontSize={"xl"}>
+        Made with ❤️ by{" "}
+        <chakra.a
+          color="orange.500"
+          href="https://twitter.com/anjalbinayak"
+          fontSize={"2xl"}
+        >
+          Anjal Binayak
+        </chakra.a>
+      </Box>
     </Container>
   );
 }
