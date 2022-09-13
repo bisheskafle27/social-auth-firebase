@@ -29,8 +29,8 @@ export default function Home() {
   console.log(user);
   return (
     <Container mt={5}>
-      <Heading fontSize={"2xl"} mb={10}>
-        Hey welcome to Social Auth{" "}
+      <Heading fontSize={"2xl"} mb={10} color="orange.400">
+        Hey welcome to <chakra.span color="orange.500">Social Auth</chakra.span>{" "}
       </Heading>
       <Text mb={10}>
         {user == null && "Login Via One of The Provider"}
